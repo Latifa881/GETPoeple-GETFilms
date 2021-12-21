@@ -9,7 +9,7 @@ import UIKit
 
 class PeopleViewController: UITableViewController {
 
-    var names = [String]()
+    var people = [PersonDetails]()
     override func viewDidLoad() {
         super.viewDidLoad()
         // specify the url that we will be sending the GET request to
@@ -30,8 +30,12 @@ class PeopleViewController: UITableViewController {
                              let resultsArray = results as! NSArray
                                  // now we can run NSArray methods like count and firstObject
                              for resultOBJ in resultsArray{
-                                 var resultDictionaryName =   (resultOBJ as! NSDictionary).value(forKey: "name") as! String
-                                 self.names.append(resultDictionaryName)
+                                 let resultDictionaryName =   (resultOBJ as! NSDictionary).value(forKey: "name") as! String
+                                 let resultDictionaryGender =   (resultOBJ as! NSDictionary).value(forKey: "gender") as! String
+                                 let resultDictionaryBirthYear =   (resultOBJ as! NSDictionary).value(forKey: "birth_year") as! String
+                                 let resultDictionaryMass =   (resultOBJ as! NSDictionary).value(forKey: "mass") as! String
+                                 
+                                 self.people.append(PersonDetails(Name: resultDictionaryName, Gender: resultDictionaryGender, BirthYear: resultDictionaryBirthYear, Mass: resultDictionaryMass))
                                  
                                  DispatchQueue.main.async {
                                  self.tableView.reloadData()
@@ -42,9 +46,7 @@ class PeopleViewController: UITableViewController {
                          }
                              
                      }//NSDictionary
-                     
-                    
-                     
+                
                  } catch {
                      print(error)
                  }
@@ -57,17 +59,33 @@ class PeopleViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return names.count
+       return people.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PersonCell" , for: indexPath)
                 // set the default cell label to the corresponding element in the people array
-                cell.textLabel?.text = names[indexPath.row]
+        cell.textLabel?.text = people[indexPath.row].Name
                 // return the cell so that it can be rendered
                 return cell
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ShowDetails", sender: people[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let destination = segue.destination as! ShowDetailsViewController
+            destination.passedPerson = sender as? PersonDetails
+
+
+        }
 
 
 }
 
+struct PersonDetails{
+    var Name :String
+    var Gender :String
+    var BirthYear:String
+    var Mass :String
+}

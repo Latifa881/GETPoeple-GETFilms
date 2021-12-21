@@ -54,6 +54,16 @@ class FilmTableViewController: UITableViewController {
                 // return the cell so that it can be rendered
                 return cell
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ShowDetails", sender: films?.results[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let destination = segue.destination as! ShowDetailsViewController
+            destination.passedFilm = sender as? Result
+
+
+        }
   
 
 }

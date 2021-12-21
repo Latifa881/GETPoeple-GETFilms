@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,10 +32,13 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="People" id="0bJ-QY-KKh"/>
+                    <connections>
+                        <segue destination="2Vo-tv-9Sn" kind="presentation" identifier="ShowDetails" modalPresentationStyle="fullScreen" id="ZNa-UX-JMB"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEL-GG-vjt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="652" y="161"/>
+            <point key="canvasLocation" x="658" y="94"/>
         </scene>
         <!--Films-->
         <scene sceneID="Hgh-dc-MeP">
@@ -60,10 +64,72 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Films" id="YDK-lb-kIV"/>
+                    <connections>
+                        <segue destination="2Vo-tv-9Sn" kind="presentation" identifier="ShowDetails" modalPresentationStyle="fullScreen" id="GcP-cX-edG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h20-fc-iiS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1345" y="100"/>
+            <point key="canvasLocation" x="1455" y="147"/>
+        </scene>
+        <!--Show Details View Controller-->
+        <scene sceneID="jM4-md-Onj">
+            <objects>
+                <viewController id="2Vo-tv-9Sn" customClass="ShowDetailsViewController" customModule="GETPoeple" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ym9-IO-36P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6RL-Bn-xEx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dia-pv-Pz7">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="204.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYj-iN-bsN">
+                                        <rect key="frame" x="0.0" y="204.5" width="414" height="204.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5e-UU-l9D">
+                                        <rect key="frame" x="0.0" y="409" width="414" height="204.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XZ-vP-fGz">
+                                        <rect key="frame" x="0.0" y="613.5" width="414" height="204.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="j77-mP-eqJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6RL-Bn-xEx" firstAttribute="top" secondItem="j77-mP-eqJ" secondAttribute="top" id="UPq-fT-hZC"/>
+                            <constraint firstItem="j77-mP-eqJ" firstAttribute="bottom" secondItem="6RL-Bn-xEx" secondAttribute="bottom" id="X46-w8-bvZ"/>
+                            <constraint firstItem="j77-mP-eqJ" firstAttribute="trailing" secondItem="6RL-Bn-xEx" secondAttribute="trailing" id="mpu-en-jud"/>
+                            <constraint firstItem="6RL-Bn-xEx" firstAttribute="leading" secondItem="j77-mP-eqJ" secondAttribute="leading" id="tNQ-zZ-vlR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="detailsLabels" destination="Dia-pv-Pz7" collectionClass="NSMutableArray" id="DUi-U6-abe"/>
+                        <outletCollection property="detailsLabels" destination="DYj-iN-bsN" collectionClass="NSMutableArray" id="lmZ-0R-FUm"/>
+                        <outletCollection property="detailsLabels" destination="P5e-UU-l9D" collectionClass="NSMutableArray" id="lIO-In-jnC"/>
+                        <outletCollection property="detailsLabels" destination="7XZ-vP-fGz" collectionClass="NSMutableArray" id="eSZ-YA-zig"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ump-nD-M5v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2333" y="95"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Xql-83-Sq1">
@@ -85,9 +151,15 @@
             <point key="canvasLocation" x="-75.362318840579718" y="99.776785714285708"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GcP-cX-edG"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
