@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C36528512770738A00629027 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36528502770738A00629027 /* AppDelegate.swift */; };
 		C36528532770738A00629027 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36528522770738A00629027 /* SceneDelegate.swift */; };
-		C36528552770738A00629027 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36528542770738A00629027 /* ViewController.swift */; };
+		C36528552770738A00629027 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36528542770738A00629027 /* PeopleViewController.swift */; };
 		C36528582770738A00629027 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36528562770738A00629027 /* Main.storyboard */; };
 		C365285B2770738A00629027 /* GETPoeple.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C36528592770738A00629027 /* GETPoeple.xcdatamodeld */; };
 		C365285D2770739000629027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C365285C2770739000629027 /* Assets.xcassets */; };
@@ -17,6 +17,9 @@
 		C365286B2770739000629027 /* GETPoepleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C365286A2770739000629027 /* GETPoepleTests.swift */; };
 		C36528752770739000629027 /* GETPoepleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36528742770739000629027 /* GETPoepleUITests.swift */; };
 		C36528772770739000629027 /* GETPoepleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36528762770739000629027 /* GETPoepleUITestsLaunchTests.swift */; };
+		C3652884277097DE00629027 /* FilmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3652883277097DE00629027 /* FilmTableViewController.swift */; };
+		C365288627709FA100629027 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C365288527709FA100629027 /* DataModel.swift */; };
+		C36528882771F18900629027 /* StarWarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36528872771F18800629027 /* StarWarsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +43,7 @@
 		C365284D2770738A00629027 /* GETPoeple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GETPoeple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36528502770738A00629027 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C36528522770738A00629027 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C36528542770738A00629027 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C36528542770738A00629027 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		C36528572770738A00629027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C365285A2770738A00629027 /* GETPoeple.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GETPoeple.xcdatamodel; sourceTree = "<group>"; };
 		C365285C2770739000629027 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +54,9 @@
 		C36528702770739000629027 /* GETPoepleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GETPoepleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36528742770739000629027 /* GETPoepleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GETPoepleUITests.swift; sourceTree = "<group>"; };
 		C36528762770739000629027 /* GETPoepleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GETPoepleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C3652883277097DE00629027 /* FilmTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewController.swift; sourceTree = "<group>"; };
+		C365288527709FA100629027 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		C36528872771F18800629027 /* StarWarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +107,16 @@
 		C365284F2770738A00629027 /* GETPoeple */ = {
 			isa = PBXGroup;
 			children = (
+				C36528892771F46600629027 /* Models */,
 				C36528502770738A00629027 /* AppDelegate.swift */,
 				C36528522770738A00629027 /* SceneDelegate.swift */,
-				C36528542770738A00629027 /* ViewController.swift */,
+				C36528542770738A00629027 /* PeopleViewController.swift */,
 				C36528562770738A00629027 /* Main.storyboard */,
 				C365285C2770739000629027 /* Assets.xcassets */,
 				C365285E2770739000629027 /* LaunchScreen.storyboard */,
 				C36528612770739000629027 /* Info.plist */,
 				C36528592770738A00629027 /* GETPoeple.xcdatamodeld */,
+				C3652883277097DE00629027 /* FilmTableViewController.swift */,
 			);
 			path = GETPoeple;
 			sourceTree = "<group>";
@@ -128,6 +136,15 @@
 				C36528762770739000629027 /* GETPoepleUITestsLaunchTests.swift */,
 			);
 			path = GETPoepleUITests;
+			sourceTree = "<group>";
+		};
+		C36528892771F46600629027 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C36528872771F18800629027 /* StarWarsModel.swift */,
+				C365288527709FA100629027 /* DataModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +278,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C36528552770738A00629027 /* ViewController.swift in Sources */,
+				C36528552770738A00629027 /* PeopleViewController.swift in Sources */,
 				C36528512770738A00629027 /* AppDelegate.swift in Sources */,
 				C36528532770738A00629027 /* SceneDelegate.swift in Sources */,
+				C3652884277097DE00629027 /* FilmTableViewController.swift in Sources */,
+				C36528882771F18900629027 /* StarWarsModel.swift in Sources */,
 				C365285B2770738A00629027 /* GETPoeple.xcdatamodeld in Sources */,
+				C365288627709FA100629027 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
